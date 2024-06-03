@@ -1,0 +1,31 @@
+
+
+		<section class="container forms">
+			<div class="form login">
+                <div class="form-content">
+                    <header>Client Login</header>
+                    <form [formGroup]="signinForm">
+                        <div class="field input-field">
+                            <input type="email" placeholder="Email" class="input" formControlName="Email">
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" placeholder="Password" class="password" formControlName="Password">
+                            <i class='bx bx-hide eye-icon'></i>
+                        </div>
+
+                        <div class="form-link">
+                            
+                        </div>
+
+                        <div class="field button-field">
+                            <button (click)="loginUser()">Login</button>
+                        </div>
+                    </form>
+
+                    <div class="form-link">
+                        <span>Don't have an account? <a routerLink="signup" class="link signup-link">Signup</a></span>
+                    </div>
+                </div>
+            </div>
+		</section>

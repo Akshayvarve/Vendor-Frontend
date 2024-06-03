@@ -1,0 +1,664 @@
+
+.hidden {
+    display: none;
+  }
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+    height: 100%;
+ }
+body {
+     margin: 0;
+     font-family: Roboto, "Helvetica Neue", sans-serif; 
+    }
+.red{background-color: lightsalmon;}
+.green{background-color: lightgreen;}
+.blue{background-color: lightskyblue;}
+.orange{background-color: orange;}
+.pink{background-color: pink;}
+.icon-info{
+    color: lightgray;
+    font-size: 20px;
+    cursor: pointer;
+}
+.backup{
+    width: 50px;
+  }
+  mat-divider{
+      background-color: gray;
+  }
+  .infoicon {
+    color: lightgray;
+    font-size: 15px;
+}
+  .border{
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-width: 2px !important;
+    padding: 20px;
+    margin: 5px;
+}
+.b_r_7{
+    border-radius: 7%;
+}
+
+.border_right1{
+    border-right: 1px solid darkgray !important;
+}
+
+.a{
+    text-decoration: none;
+}
+tr.border-bottom td {
+    border-bottom: 1pt dotted black;
+  }
+.noscroll::-webkit-scrollbar {
+    display: none;
+    }
+    .dialoghead{
+        background-color: royalblue;  
+        border-radius: 5px; 
+        color: white; 
+        padding: 5px;   
+   }
+   .size{
+       height: auto; 
+       max-height: 800px;
+            overflow-y : scroll;
+   }
+   .bdr{
+       border: 1pt solid black;
+   }
+  
+
+   .bdrbtm{
+       border-bottom: 1pt solid black;
+   }
+   
+   // styles for thermal printer 
+   .wdh80pdl10{
+       width: 80%;;
+       padding-left: 10px;
+   }
+   .mat-toolbar-multiple-rows {
+    // padding: auto;
+    min-height: 48px;
+}
+.header_nav{
+    // background-image: linear-gradient(to right,rgba(255, 0, 0, 0.483), #a846c6b8);
+    background-image: linear-gradient(to right,rgba(90, 87, 87, 0.721),#323133d4 );
+    // opacity: .8;
+    border-bottom: 2px solid rgb(250, 248, 248);
+    border-radius: 0px 0px 5px 5px;
+    height: 30px;
+    .user{
+        // font-family: poppins;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+.sidebar{
+    // background-image: linear-gradient(#a846c6b8,rgba(255, 0, 0, 0.483) );
+    
+    // opacity: .8;
+    border-radius: 5px 5px 0px 0px;
+    // font-family: poppins;
+    font-family: Helvetica, sans-serif;
+    color: rgb(223, 222, 222);
+    
+    a{
+        font-family: Helvetica, sans-serif;
+        font-weight: bolder;
+        color: rgb(223, 222, 222) !important;
+    }
+}
+
+// ScrollBar start
+.scrollbar::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+   
+    background-color: #F5F5F5 !important; }
+.scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #fd0a53a1 !important; }
+.scrollbar{scrollbar-color: #fd0a53a1 #F5F5F5 !important;}
+
+.mat-drawer-inner-container::-webkit-scrollbar {
+    width: 10px;
+    display: none;
+    background-color: #F5F5F5 !important; }
+.mat-drawer-inner-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #fd0a53a1 !important; }
+.mat-drawer-inner-container{scrollbar-color: #fd0a53a1 #F5F5F5 !important;}
+
+.mat-drawer-content::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5 !important; }
+.mat-drawer-content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #fd0a53a1 !important; }
+.mat-drawer-content{scrollbar-color: #fd0a53a1 #F5F5F5 !important;}
+
+// ScrollBar end
+
+
+.mat-toolbar-multiple-rows {
+    min-height: 46px;
+}
+
+
+footer{
+    background-color: lightgray;
+    padding: 5px;
+   
+}
+
+
+.mat-icon-sm{font-size: 15px;}
+
+//Colors
+.green{color: green;background:none;}.pink{color: pink;background:none;}.red{color: red;background:none;}
+.white{color: white;background:none;}.blue{color: blue;background:none;}.royalbule{color: royalblue;background:none;}
+.skyblue{color: skyblue;background:none;} .primary{color:#3f51b5 !important}  .bg_primary{background-color:#3f51b5 !important}
+.accent{color: #b4342b;} 
+//background Colors
+.bg_darkblue{background-color: darkblue;}
+
+.btn_close{height: 40px; padding-bottom: 15px; font-size: 20px;color: white;}
+.title{height: 40px; padding: 5px; font-size: 20px;color: white;}
+
+//for toolbar
+.spacer{flex: 1 1 auto;}
+.toolBar{
+    border: 1px solid ;
+    height: 35px;
+    margin-bottom: 10px;
+    border-radius:10px;
+    // box-shadow: 0px 3px 10px  rgb(106, 105, 105);
+    color: white;
+    // background-color: #3f51b5;
+    background-color: #6b79c5;
+    font-size: 15px;
+    // text-shadow: 3px 3px 5px rgb(66, 65, 65);
+  }
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+// ******************For margin*************
+.m1{
+    margin: 1% !important;
+}
+
+.m_b_1{
+    margin-bottom: 1% !important;
+}
+.m_t_1{
+    margin-top:1% !important;
+}
+.m_t_2{
+    margin-top:2% !important;
+}
+.m_r_1{
+    margin-right: 1%;
+}
+// ******************For Padding*************
+.p_r_20px{
+    padding-right: 20px;
+}
+.pd5{
+    padding: 5px;
+}
+.pd1{
+    padding: 1%;
+}
+.p_l_20{
+    left:20%;
+}
+.p_t_1{
+    padding-top: 1%;
+}
+.p_lr_1{
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+// ******************For Width*************
+
+.max_width{min-width: 100%;}
+.half_width{width: 50%;}
+.full_width{width: 100%;}
+.width_80px{width:80px;}    //For table's cells width
+.width_100px{width:100px;}    //For table's cells width
+
+// ******************For Height*************
+    // .full_height{
+
+    //     height: 20vh;
+    // }
+
+// .form_height{
+//     height: calc(100vh - 340px);
+// }
+// ****************** For hover effect ******************
+.hover:hover {
+    background: #efefef;
+  }
+.hover_bold:hover{
+    font-weight: bolder;
+}
+
+  .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+    color:#3f51b5 !important;
+    font-weight: bolder !important;
+  }
+  .mat-tab-list .mat-tab-label {
+    // color:#3f51b5 !important;
+    font-weight: bolder !important;
+  }
+//   .scrolbar{
+//     overflow: scroll;
+//   }
+//   .scroll_disp_none::-webkit-scrollbar{
+//     display: none;
+//   }
+
+// *************All Buttons***********
+
+// Add Button
+.btnadd{
+    
+    // background-color:#3f51b5;
+    background-color:#5664b3;
+    // background-color:#3cca72;
+	cursor:pointer;
+	color:white;
+    
+    height: 39px;
+    border-radius: 5px !important;
+    // color: white;
+    // font-family: Helvetica, sans-serif;
+    // font-weight: bolder;
+    // border:1px solid white !important;
+    // border-radius: 20px !important;
+    // box-shadow: rgb(40, 91, 39) 2px 3px 10px 0px !important;
+    // background-image: linear-gradient(#5fb34ee0,rgba(42, 113, 7, 0.843),#5fb34ee0 );
+}
+.btnadd:hover {
+	background-color:#5165d6;
+}
+
+// Save Button
+.btnsave{
+    background-color: #36bc22;
+    // background-color: #13ced4f8;
+	cursor:pointer;
+	color:white;
+	width: 50%;
+    // border-radius: 20px !important;
+}
+.btnsave:hover {
+	background-color:#26a312;
+}
+
+// Clear Button
+.btnclear{
+    background-color: #ff4081;
+    cursor:pointer;
+	color:white;
+    width: 50%;
+}
+.btnclear:hover {
+	background-color:#df175a;
+}
+
+// Update Button
+.btnUpdate{
+    background-color: #24a0ed ;
+    cursor:pointer;
+	color:white;
+}
+.btnUpdate:hover {
+	background-color:#1a79b4;
+}
+
+// Edit Icon Button
+.btnEdit{
+    color: #24a0ed ;
+    cursor:pointer;
+    :hover{
+        color:#1a79b4;
+    }
+}
+
+// Delete Icon Button
+.btnDelete{
+    color: #f44336;
+    cursor:pointer;
+    :hover {
+        color:#b4342b;
+    }
+}
+
+
+.btnBack{
+    font-size: 15px;
+
+}
+.btnBack:hover{
+    font-weight: bolder;
+}
+
+//for buttons shubham
+
+.btn_add{
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-weight: bolder;
+    border:1px solid white !important;
+    border-radius: 20px !important;
+    box-shadow: rgb(40, 91, 39) 2px 3px 10px 0px !important;
+    background-image: linear-gradient(#5fb34ee0,rgba(42, 113, 7, 0.843),#5fb34ee0 );
+}
+.btn_update{
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-weight: bolder;
+    border:1px solid white !important;
+    border-radius: 20px !important;
+    box-shadow: rgb(40, 91, 39) 2px 3px 10px 0px !important;
+    background-image: linear-gradient(#437690e0,rgba(35, 113, 152, 0.653),#437690e0 );
+}
+.btn_edit{
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-weight: bolder;
+    border:1px solid white !important;
+    border-radius: 20px !important;
+    box-shadow: rgb(40, 91, 39) 2px 3px 10px 0px !important;
+    background-image: linear-gradient(#5d0a6ce8,rgb(122, 14, 223),#530f5ffb );
+}
+.btn_delete{
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-weight: bolder;
+    border:1px solid white !important;
+    border-radius: 20px !important;
+    box-shadow: rgb(40, 91, 39) 2px 3px 10px 0px !important;
+    background-image: linear-gradient(#d11010e0,rgba(165, 56, 66, 0.843),#d11010e0 );
+}
+
+//Buttons end shubham
+
+
+// For Add Purchase quotaion
+.ANPQ{
+    height: 100%;
+    max-height: 100%;
+     // width: 100%;
+     // min-width: 70%;
+ //   max-width: 100%;
+     max-width:100%;
+     overflow: scroll;
+     // margin: 1%;
+     padding-bottom: 5%;
+     margin: 0;
+     padding-top:2%;
+     padding-left:1%;
+     padding-right:1%;
+ }
+ .ANPQ::-webkit-scrollbar{
+     display: none;  
+ }
+
+ .add_sale_pur_table{
+    border:1px solid black;
+    border-radius: 5px;
+    border-style: double;
+    width: 100%;
+    max-height: 300px;
+    min-height: 200px;
+    overflow: scroll;
+}
+.add_sale_pur_container{
+    padding-bottom: 20px;   
+}
+.fitFormField{
+    .mat-form-field-appearance-legacy .mat-form-field-infix {
+        padding: .4375em 0;
+        width: fit-content;
+    }
+}
+
+// For Dynamic Table
+.dynamicTable{
+    border:1px solid black;
+    border-radius: 5px;
+    border-style: double;
+    width: auto;
+    max-height: 240px;
+    min-height: 240px;
+    overflow: scroll;
+    overflow-x: scroll;
+    margin-bottom: 2%  !important;
+
+    thead,tfoot{
+        background-color: rgb(236, 232, 232);    
+        position: sticky;
+
+    }
+     
+}
+
+
+
+.dynamicTableA{
+    border:1px solid black;
+    border-radius: 5px;
+    border-style: double;
+    width: auto;
+    max-height: 550px;
+    min-height: 550px;
+    overflow: scroll;
+    overflow-x: scroll;
+    margin-bottom: 2%  !important;
+
+    thead,tfoot{
+        background-color: rgb(236, 232, 232);    
+        position: sticky;
+
+    }
+     
+}
+
+.dynamicTable2{
+    border:1px solid black;
+    border-radius: 5px;
+    border-style: double;
+    width: auto;
+    max-height: 500px;
+    min-height: 500px;
+    overflow: scroll;
+    margin-bottom: 2%  !important;
+
+    thead,tfoot{
+        background-color: rgb(236, 232, 232);    
+        position: sticky;
+
+    }
+     
+}
+
+.dynamicTable3{
+    border:1px solid black;
+    border-radius: 5px;
+    border-style: double;
+    width: auto;
+    max-height: 380px;
+    min-height: 380px;
+    overflow: scroll;
+    margin-bottom: 2%  !important;
+
+    thead,tfoot{
+        background-color: rgb(236, 232, 232);    
+        position: sticky;
+
+    }
+     
+}
+
+.dynamicTable4{
+    border:1px solid black;
+    border-radius: 5px;
+    border-style: double;
+    width: auto;
+    max-height: 380px;
+    min-height: 380px;
+    overflow: scroll;
+    overflow-x: scroll;
+    margin-bottom: 2%  !important;
+
+    thead,tfoot{
+        background-color: rgb(236, 232, 232);    
+        position: sticky;
+
+    }
+     
+}
+.addDelRow{
+    padding:0 !important;
+    min-width: 35px !important;
+}
+
+
+.infoTable{
+    border-radius: 5px;
+    width: 100%;
+    max-height: 340px;
+    min-height: 340px;
+    overflow: scroll;
+ 
+    margin-bottom: 2%  !important;
+
+    thead,tfoot{
+        background-color: rgb(236, 232, 232);    
+        position: sticky;
+    }
+         
+}
+
+
+.AdmissionTable{
+    border-radius: 5px;
+    width: 100%;
+    max-height: 550px;
+    min-height: 550px;
+    overflow: scroll;
+ 
+    margin-bottom: 2%  !important;
+
+    thead,tfoot{
+        background-color: rgb(236, 232, 232);    
+        position: sticky;
+    }
+         
+}
+
+.infoTable1{
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid black;
+    max-height: 340px;
+    min-height: 340px;
+    overflow: scroll;
+  
+    margin-bottom: 2%  !important;
+}
+
+
+.partySrno{
+    max-width: 200px;
+    min-width: 50px;
+
+}
+.partyName{
+    max-width: 200px;
+    min-width: 200px;
+    
+  }
+  .partyName1{
+    max-width: 100px;
+    min-width: 100px;
+    border-right: 1px solid darkgray !important;
+
+}
+.partyName2{
+    max-width: 200px;
+    min-width: 150px;
+    
+  }
+  .partyType{
+    max-width: 200px;
+    min-width: 120px;
+  }
+  .partycontact{
+    max-width: 200px;
+    min-width: 150px;
+  }
+  .partyaddress{
+    max-width: 200px;
+    min-width: 150px;
+  }
+.partyName1{
+    max-width: 100px;
+    min-width: 100px;
+    border-right: 1px solid darkgray !important;
+
+}
+
+.partybtn{
+    padding-left: 40px;
+  }
+  
+  .partybtn1{
+    margin-left: 40px;
+  }
+  
+  
+
+
+.partybtn{
+    padding-left: 40px;
+  }
+  
+  //party table scrolling
+
+  .infoTable2::-webkit-scrollbar{
+    display: none;
+  }
+  .infoTable2{
+    // width: 100%;
+    max-height: 500px;
+    min-height: 500px;
+    overflow: scroll;
+    margin-bottom: 2%  !important;
+  }
+  .infoTable3{
+    max-height: 60%;
+}
+

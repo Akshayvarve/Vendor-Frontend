@@ -1,0 +1,100 @@
+<div>
+    <mat-toolbar class="toolBar" fxLayoutAlign="center center">
+        <span>Vendor</span>
+        <span class="spacer"></span>
+       
+    </mat-toolbar>
+</div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between center">
+       
+
+        <mat-form-field>
+            <mat-label>Search Vendor</mat-label>
+            <input matInput #search placeholder="Ex.Vendor Details" [(ngModel)]="search.value" (keyup)="searchClient($event)">
+        
+            <button  *ngIf="search.value" matSuffix mat-icon-button (click)="search.value=''">
+                <mat-icon>close</mat-icon>
+            </button>
+            
+            <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="1%"  class="fitFormField">
+            <button id="btnAddParty" class="btnadd" mat-raised-button type="button" (click)="addVendor()"> 
+                Add Vendor
+            </button>
+          </div>
+    </div>
+
+
+
+<mat-paginator #paginatorRef [pageSize]="10" [pageSizeOptions]="[5, 10, 20, 100, 500]" showFirstLastButtons>
+</mat-paginator>
+<div class="mat-elevation-z8  tableContainer" >
+    <div class="infoTable scrollbar"> 
+
+    <table mat-table class="max_width" [dataSource]="partyDataSource" matSort>
+     
+        <ng-container matColumnDef="Sr.No">
+            <th mat-header-cell  fxFlex="6" class="partySrno" fxLayoutAlign="center center"
+                *matHeaderCellDef mat-sort-header> <strong>Sr.No</strong> </th>
+            <td mat-cell ffxFlex="6" fxLayoutAlign="center center" class="partySrno" *matCellDef="let element; let i = index">
+                {{ (paginatorRef.pageIndex * paginatorRef.pageSize) + (i + 1) }}
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="partyType" fxFlex="18" fxFlex.lt-md="25"
+            fxLayoutAlign="center center"><strong> Name </strong> </th>
+            <td mat-cell *matCellDef="let element" fxFlex="20" class="partyType" fxFlex.lt-md="150px"
+                fxLayoutAlign="center center">
+                {{element.name}} 
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Company Name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="partyType" fxFlex="22" fxFlex.lt-md="25"
+            fxLayoutAlign="center center"><strong> Company Name </strong> </th>
+            <td mat-cell *matCellDef="let element" fxFlex="20" class="partyType" fxFlex.lt-md="150px"
+                fxLayoutAlign="center center">
+                {{element.company_name}} 
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Address" >
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="partyType" fxFlex="12" fxFlex.lt-md="25"
+            fxLayoutAlign="center center"><strong> Address </strong> </th>
+            <td mat-cell *matCellDef="let element" fxFlex="14" class="partyType" fxFlex.lt-md="150px"
+                fxLayoutAlign="center center">
+                {{element.address_line_1}} 
+            </td>
+        </ng-container>
+
+       
+
+    
+
+            <ng-container matColumnDef="Action">
+                <th mat-header-cell *matHeaderCellDef fxFlex="200px"  fxLayoutAlign="center center" ><strong>Action</strong></th>
+                <td mat-cell *matCellDef="let element" fxFlex="150px" align="end">
+                    <!-- <div fxLayout="row" fxFlex="100px"> -->
+                        
+                        <button mat-icon-button class="btnEdit" (click)="updateVendor(element.dealer_id)" >
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        
+                        <button mat-icon-button class="btnDelete" (click)="deleteVendor(element.dealer_id)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    <!-- </div> -->
+                </td>
+            </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="partyDisplayColumn;sticky:true;"></tr>
+        <tr mat-row *matRowDef="let row; columns: partyDisplayColumn;"></tr>
+    </table>
+   
+       
+</div>
+
+

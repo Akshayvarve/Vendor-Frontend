@@ -1,0 +1,262 @@
+<div fxLayout="column">
+    <mat-toolbar fxFlex class="toolBar" fxLayoutAlign="center center">
+        <span>Update Vendor </span>
+        <span class="spacer"></span>
+        <button id="btnClear" mat-dialog-close mat-icon-button matTooltip="Close" matTooltipPosition="below">
+            <mat-icon>highlight_off</mat-icon>
+        </button>
+    </mat-toolbar>
+
+    <div>
+        <form [formGroup]="UpdateVendor">
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="1%" class="fitFormField">
+                <div fxLayout="column" fxFlex>
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="1%" class="fitFormField">
+                       
+                        <mat-form-field fxFlex >
+                            <mat-label>dealer_id </mat-label>
+                            <input matInput id="txtdealer_id" formControlName="dealer_id" [(ngModel)]="SingleVendor.dealer_id"
+                                readonly>
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex>
+                            <mat-label>login_access</mat-label>
+                            <input matInput id="txttitle" type="text" formControlName="login_access" [(ngModel)]="SingleVendor.login_access">
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex>
+                            <mat-label> Name</mat-label>
+                            <input matInput id="txtauthor" type="text" formControlName="name" [(ngModel)]="SingleVendor.name">
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex >
+                            <mat-label>company_name</mat-label>
+                            <input matInput id="txtcompany_name" type="text" formControlName="company_name" [(ngModel)]="SingleVendor.company_name">
+                        </mat-form-field>
+
+                        </div>
+
+                        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="1%" class="fitFormField">
+                            <mat-form-field fxFlex >
+                                <mat-label>mobile_no </mat-label>
+                                <input matInput id="txtdmobile_no" formControlName="mobile_no" [(ngModel)]="SingleVendor.mobile_no">
+                            </mat-form-field>
+    
+                            <mat-form-field fxFlex>
+                                <mat-label>date_of_birth</mat-label>
+                                <input matInput [matDatepicker]="picker" formControlName="date_of_birth" #Bdate [(ngModel)]="SingleVendor.date_of_birth">
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+
+                            <mat-form-field fxFlex>
+                                <mat-label>anniversary_date</mat-label>
+                                <input matInput [matDatepicker]="picker3" formControlName="anniversary_date" #AnnvDate [(ngModel)]="SingleVendor.anniversary_date">
+                                <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                                <mat-datepicker #picker3></mat-datepicker>
+                            </mat-form-field>
+    
+                            <mat-form-field fxFlex>
+                                <mat-label> telephone_no</mat-label>
+                                <input matInput id="txtauthor" formControlName="telephone_no" [(ngModel)]="SingleVendor.telephone_no">
+                            </mat-form-field>
+
+                        </div>
+
+                        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="1%" class="fitFormField">
+                      
+                        <mat-form-field fxFlex >
+                            <mat-label>whatsapp_no</mat-label>
+                            <input matInput id="txtwhatsapp_no"  formControlName="whatsapp_no" [(ngModel)]="SingleVendor.whatsapp_no">
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex >
+                            <mat-label>remark</mat-label>
+                            <input matInput id="txtremark"  formControlName="remark" [(ngModel)]="SingleVendor.remark">
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex="25">
+                            <mat-label>gst_type</mat-label>
+                            <mat-select id="txtgst_type" [(value)]="selectedItem" formControlName="gst_type" [(ngModel)]="SingleVendor.gst_type">
+                                <mat-option value="1"> Registered</mat-option>
+                                <mat-option value="2"> UnRegistered</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex [ngClass]="{ 'hidden': selectedItem != 1 }">
+                            <mat-label>gstin</mat-label>
+                            <input matInput id="txtgstin"  formControlName="gstin" [(ngModel)]="SingleVendor.gstin">
+                        </mat-form-field>
+
+                    </div>
+
+
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="1%" class="fitFormField">
+                     
+                        <mat-form-field fxFlex >
+                            <mat-label>pan_no</mat-label>
+                            <input matInput id="txtpan_no"  formControlName="pan_no" [(ngModel)]="SingleVendor.pan_no">
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex >
+                            <mat-label>apply_tds</mat-label>
+                            <input matInput id="txtapply_tds"  formControlName="apply_tds" [(ngModel)]="SingleVendor.apply_tds">
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex >
+                            <mat-label>credit_limit</mat-label>
+                            <input matInput id="txtcredit_limit"  formControlName="credit_limit" [(ngModel)]="SingleVendor.credit_limit">
+                        </mat-form-field>
+                      
+                        <mat-form-field fxFlex >
+                            <mat-label>opening_balance</mat-label>
+                            <input matInput id="txtopening_balance"  formControlName="opening_balance" [(ngModel)]="SingleVendor.opening_balance">
+                        </mat-form-field>
+
+                    </div>
+
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="1%" class="fitFormField">
+                     
+                        <mat-form-field fxFlex>
+                            <mat-label>opening_balance_type</mat-label>
+                            <mat-select id="txtopening_balance_type"  formControlName="opening_balance_type" [(ngModel)]="SingleVendor.opening_balance_type" >
+                                <mat-option value="1"> Cr</mat-option>
+                                <mat-option value="2"> Dr</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex >
+                            <mat-label>supplier_type</mat-label>
+                            <input matInput id="txtsupplier_type"  formControlName="supplier_type" [(ngModel)]="SingleVendor.supplier_type">
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex >
+                            <mat-label>email</mat-label>
+                            <input matInput id="txtemail"  formControlName="email" [(ngModel)]="SingleVendor.email">
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex>
+                            <mat-label> Address_line_1</mat-label>
+                            <input matInput id="txtauthor" type="text" formControlName="address_line_1" [(ngModel)]="SingleVendor.address_line_1">
+                        </mat-form-field>
+                      
+                    </div>
+
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="1%" class="fitFormField">
+
+                        <mat-form-field fxFlex>
+                            <mat-label> Address_line_2</mat-label>
+                            <input matInput id="txtauthor" type="text" formControlName="address_line_2" [(ngModel)]="SingleVendor.address_line_2">
+                        </mat-form-field>
+                     
+                        <mat-form-field fxFlex>
+                            <mat-label>Country</mat-label>
+                            <mat-select formControlName="country" [(ngModel)]="SingleVendor.CountryId">
+                                <mat-option *ngFor="let row of allCountry " [value]="row.CountryId" matSort>
+                                    {{row.Country}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex>
+                            <mat-label>State</mat-label>
+                            <mat-select formControlName="state" [(ngModel)]="SingleVendor.StateId">
+                                <mat-option *ngFor="let row of allStates " [value]="row.StateId" matSort>
+                                    {{row.State}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                            
+                        <mat-form-field fxFlex>
+                            <mat-label>city</mat-label>
+                            <mat-select formControlName="city" [(ngModel)]="SingleVendor.CityId">
+                                <mat-option *ngFor="let row of allCity " [value]="row.CityId" matSort>
+                                    {{row.City}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+            
+                    </div>
+
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="1%" class="fitFormField">
+                                    
+                        <mat-form-field fxFlex>
+                            <mat-label> pincode</mat-label>
+                            <input matInput id="txtauthor" formControlName="pincode" [(ngModel)]="SingleVendor.pincode">
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex>
+                            <mat-label>address_type</mat-label>
+                            <mat-select id="txtaddress_type"  formControlName="address_type" [(ngModel)]="SingleVendor.address_type">
+                                <mat-option value="1"> Shipping</mat-option>
+                                <mat-option value="2"> Billing</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex>
+                            <mat-label> bank_ifsc_code</mat-label>
+                            <input matInput  formControlName="bank_ifsc_code" [(ngModel)]="SingleVendor.bank_ifsc_code">
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex>
+                            <mat-label> bank_name</mat-label>
+                            <input matInput  formControlName="bank_name" [(ngModel)]="SingleVendor.bank_name">
+                        </mat-form-field>
+
+                    </div>
+
+
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="1%" class="fitFormField">
+                       
+                        <mat-form-field fxFlex>
+                            <mat-label> branch_name</mat-label>
+                            <input matInput  formControlName="branch_name" [(ngModel)]="SingleVendor.branch_name">
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex>
+                            <mat-label> account_no</mat-label>
+                            <input matInput  formControlName="account_no" [(ngModel)]="SingleVendor.account_no">
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex>
+                            <mat-label> account_holder_name</mat-label>
+                            <input matInput  formControlName="account_holder_name" [(ngModel)]="SingleVendor.account_holder_name">
+                        </mat-form-field>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div fxLayoutAlign="end center" fxLayoutGap="10px" class=" clear">
+                
+                <button mat-raised-button fxFlex="10" class="btnsave" (click)="fnUpdateVendor();" id="btnSaveParty" mat-dialog-close
+                    type="submit">Update
+                </button>
+            </div>
+         
+        </form>
+       
+    
+     
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

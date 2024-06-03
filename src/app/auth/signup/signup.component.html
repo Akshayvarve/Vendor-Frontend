@@ -1,0 +1,36 @@
+<section class="container forms">
+        <div class="form signup">
+			<div class="form-content">
+				<header>New Client Signup</header>
+				<form [formGroup]="signUpForm">
+					<div class="field input-field">
+						<input formControlName="Name"   placeholder="User Name" class="input">
+					</div>
+					<div class="field input-field">
+						
+						<input formControlName="Email"  placeholder="Email" class="input">
+					</div>
+					<div class="field input-field">
+						<input formControlName="Password" type="password" placeholder="Create password" class="password">
+					</div>
+
+					<div class="field input-field">
+						<input formControlName="confirmPassword" type="password" placeholder="Confirm password" class="password">
+						<i class='bx bx-hide eye-icon'></i>
+					</div>
+
+					<div class="field button-field">
+						<button [disabled]="!signUpForm.valid" (click)="fnSignUpAdmin()">Signup</button>
+					</div>
+				</form>
+
+				<div class="form-link">
+					<span>Already have an account? <a routerLink="/" class="link login-link">Login</a></span>
+				</div>
+			</div>
+
+			<div class="line"></div>
+
+		</div>
+    </section>
+		
