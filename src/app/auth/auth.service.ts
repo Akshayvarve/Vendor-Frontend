@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Router } from 'express';
+import { Router } from '@angular/router';
 import { environment } from '../../environments/environment';
 
 @Injectable({
@@ -15,7 +15,7 @@ export class AuthService {
   'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT',
    })
 
-   constructor(private http: HttpClient, ) { }
+   constructor(private http: HttpClient, private router: Router, ) { }
 
    IsLoggedIn() {
     return !!localStorage.getItem('jwt_token')
@@ -24,7 +24,10 @@ export class AuthService {
   signupUser(form) {
     return this.http.post(`${environment.Auth_URL}user`, form, { headers: this.httpHeaders })
   }
-
+  logout() {
+    localStorage.clear();
+    this.router.navigate([''])
+  }
   login(user: any) {
     return this.http.post(`${environment.Auth_URL}user/login`, user)
   }

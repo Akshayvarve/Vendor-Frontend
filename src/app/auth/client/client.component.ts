@@ -62,6 +62,9 @@ export class ClientComponent {
       this.getVendor();
     });
   }
+  Logout() {
+    this.service.logout()
+  }
   
   updateVendor(dealer_id: any): void {
     const dialogRef = this.dialog.open(UpdatevendorComponent, {

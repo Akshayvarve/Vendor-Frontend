@@ -1,36 +1,43 @@
 <section class="container forms">
-        <div class="form signup">
-			<div class="form-content">
-				<header>New Client Signup</header>
-				<form [formGroup]="signUpForm">
-					<div class="field input-field">
-						<input formControlName="Name"   placeholder="User Name" class="input">
-					</div>
-					<div class="field input-field">
-						
-						<input formControlName="Email"  placeholder="Email" class="input">
-					</div>
-					<div class="field input-field">
-						<input formControlName="Password" type="password" placeholder="Create password" class="password">
-					</div>
-
-					<div class="field input-field">
-						<input formControlName="confirmPassword" type="password" placeholder="Confirm password" class="password">
-						<i class='bx bx-hide eye-icon'></i>
-					</div>
-
-					<div class="field button-field">
-						<button [disabled]="!signUpForm.valid" (click)="fnSignUpAdmin()">Signup</button>
-					</div>
-				</form>
-
-				<div class="form-link">
-					<span>Already have an account? <a routerLink="/" class="link login-link">Login</a></span>
-				</div>
-			</div>
-
-			<div class="line"></div>
-
-		</div>
-    </section>
-		
+    <div class="form signup">
+        <div class="form-content">
+            <header>New Client Signup</header>
+            <form [formGroup]="signUpForm" (ngSubmit)="fnSignUpAdmin()">
+                <div class="field input-field">
+                    <input formControlName="Name" placeholder="User Name" class="input">
+                    <div *ngIf="signUpForm.get('Name').invalid && (signUpForm.get('Name').dirty || signUpForm.get('Name').touched)">
+                        <div *ngIf="signUpForm.get('Name').errors?.required">Name is required.</div>
+                        <div *ngIf="signUpForm.get('Name').errors?.whitespace">Name cannot be empty or whitespace.</div>
+                    </div>
+                </div>
+                <div class="field input-field">
+                    <input formControlName="Email" placeholder="Email" class="input">
+                    <div *ngIf="signUpForm.get('Email').invalid && (signUpForm.get('Email').dirty || signUpForm.get('Email').touched)">
+                        <div *ngIf="signUpForm.get('Email').errors?.required">Email is required.</div>
+                        <div *ngIf="signUpForm.get('Email').errors?.email">Email is not valid.</div>
+                    </div>
+                </div>
+                <div class="field input-field">
+                    <input formControlName="Password" type="password" placeholder="Create password" class="password">
+                    <div *ngIf="signUpForm.get('Password').invalid && (signUpForm.get('Password').dirty || signUpForm.get('Password').touched)">
+                        <div *ngIf="signUpForm.get('Password').errors?.required">Password is required.</div>
+                        <div *ngIf="signUpForm.get('Password').errors?.whitespace">Password cannot be empty or whitespace.</div>
+                    </div>
+                </div>
+                <div class="field input-field">
+                    <input formControlName="confirmPassword" type="password" placeholder="Confirm password" class="password">
+                    <div *ngIf="signUpForm.errors?.['passwordsMismatch'] && (signUpForm.get('confirmPassword').dirty || signUpForm.get('confirmPassword').touched)">
+                        <div>Passwords do not match.</div>
+                    </div>
+                </div>
+                <div class="field button-field">
+                    <button [disabled]="!signUpForm.valid">Signup</button>
+                </div>
+            </form>
+            <div class="form-link">
+                <span>Already have an account? <a routerLink="/" class="link login-link">Login</a></span>
+            </div>
+        </div>
+        <div class="line"></div>
+    </div>
+</section>
